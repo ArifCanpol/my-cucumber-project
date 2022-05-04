@@ -1,3 +1,4 @@
+@player @player_page
 Feature: Blue Billywig Player
 
 
