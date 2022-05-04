@@ -4,7 +4,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.PlayerPage;
 import utilities.Driver;
@@ -34,14 +33,6 @@ public class PlayerPageStepdefs {
         assertTrue("Player is NOT displayed",isPlayerDisplayed);
     }
 
-    @Given("user sees a big play button in the center of the player")
-    public void userSeesABigPlayButtonInTheCenterOfThePlayer() {
-        Driver.sleep(1000);
-        WebElement button = Driver.waitForVisibility(playerPage.bigPlayButton,5);
-        assertTrue("user do NOT see the big button",button.isDisplayed());
-        Driver.sleep(1000);
-    }
-
     @When("user presses the {string} button")
     public void userPressesTheButton(String button) {
         switch(button){
@@ -69,13 +60,6 @@ public class PlayerPageStepdefs {
         boolean isVideoPlaying = Driver.waitForVisibility(playerPage.playingState,5).isDisplayed();
         assertTrue("Video is NOT playing",isVideoPlaying);
         Driver.sleep(1000);
-    }
-
-    @Given("user sees a mute button on the left side of the player control container")
-    public void userSeesAMuteButtonOnTheLeftSideOfThePlayerControlContainer() {
-        Driver.sleep(1000);
-        WebElement button = Driver.waitForVisibility(playerPage.playerMuteButton,5);
-        assertTrue("User could NOT see the mute button", button.isDisplayed());
     }
 
     @Then("the video element is muted")
