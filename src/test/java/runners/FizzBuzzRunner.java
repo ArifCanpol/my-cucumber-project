@@ -81,9 +81,9 @@ public class FizzBuzzRunner {
     @Test
     public void getFizzBuzzList(){
 
-        System.out.println( getFizzs() );
-        System.out.println( getBuzzs() );
-        System.out.println( getFizzBuzzs() );
+        System.out.println("Fizz numbers: "+ getFizzs() );
+        System.out.println("Buzz numbers: "+ getBuzzs() );
+        System.out.println("FizzBuzz numbers: "+ getFizzBuzzs() );
 
     }
 
